@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+  <a href="#" class="navbar-brand">AIRBUS</a>
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/aircrafts">Aircrafts</a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Programs</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/alert">Alert</a>
+    </li>
+    <ng-container
+      *ngIf="!(userLogged$ | async) as isUserLoggedIn"
+      [ngSwitch]="aircraftsStateEnum.LOADED"
+    >
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">Login</a>
+      </li>
+    </ng-container>
+    <ng-container
+      *ngIf="userLogged$ | async as isUserLoggedIn"
+      [ngSwitch]="aircraftsStateEnum.LOADED"
+    >
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login">LogOut</a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
