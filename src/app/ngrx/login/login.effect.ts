@@ -44,15 +44,4 @@ export class UsersEffects {
       })
     )
   );
-  // GetUserLogout: Observable<Action> = createEffect(() =>
-  //   this.effectActions.pipe(
-  //     ofType(LogoutActionsTypes.LOGOUT_USER),
-  //     mergeMap(() => {
-  //       return this.authService.logout().pipe(
-  //         map(() => new GetUserLogoutActionSuccess()), // Action de succès si la déconnexion réussit
-  //         catchError((err) => of(new GetUserLogoutActionError(err.message))) // Action d'erreur en cas d'échec de la déconnexion
-  //       );
-  //     })
-  //   )
-  // );
 }

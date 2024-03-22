@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
   }
 
   logoutUser() {
-    console.log('USER LOGOUT');
-    this.authService.logout();
+    this.store.dispatch(new GetUserAction({ email: '' }));
   }
 }

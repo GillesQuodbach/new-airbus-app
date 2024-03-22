@@ -26,8 +26,4 @@ export class AuthenticateService {
   public isUserLoggedIn$(): Observable<boolean> {
     return this.store.select(isUserLoggedIn);
   }
-  public logout(): void {
-    // Changez le type de retour à Observable<void>
-    return this.store.dispatch(new GetUserLogoutAction({}));
-  }
 }
