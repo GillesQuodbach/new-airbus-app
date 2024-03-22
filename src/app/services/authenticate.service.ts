@@ -18,8 +18,10 @@ export class AuthenticateService {
       .pipe(map((users) => users.some((user) => user.email === email)));
   }
 
-  public getUsers(email: string): Observable<User[]> {
-    return this.http.get<User[]>(environment.host + `/users?email=${email}`);
+  public getUsers(email: string, password: string): Observable<User[]> {
+    return this.http.get<User[]>(
+      environment.host + `/users?email=${email}&password=${password}`
+    );
   }
 
   public isUserLoggedIn$(): Observable<boolean> {

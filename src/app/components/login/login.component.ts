@@ -37,10 +37,10 @@ export class LoginComponent implements OnInit {
 
   loginUser() {
     const { email, password } = this.loginForm.value;
-    this.store.dispatch(new GetUserAction({ email }));
+    this.store.dispatch(new GetUserAction({ email, password }));
   }
 
   logoutUser() {
-    this.store.dispatch(new GetUserAction({ email: '' }));
+    this.store.dispatch(new GetUserAction({ email: '', password: '' }));
   }
 }

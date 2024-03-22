@@ -37,14 +37,12 @@ export function AircraftsReducer(
       return {
         ...state,
         dataState: AircraftsStateEnum.LOADING,
-        aircrafts: (<AircraftsActions>action).payload,
         users: (<UserActions>action).payload,
       };
     case UsersActionsTypes.GET_USER_SUCCESS:
       return {
         ...state,
         dataState: AircraftsStateEnum.LOADED,
-        aircrafts: (<AircraftsActions>action).payload,
         users: (<UserActions>action).payload,
         isUserLogged: true,
       };
@@ -54,7 +52,7 @@ export function AircraftsReducer(
       return {
         ...state,
         dataState: AircraftsStateEnum.ERROR,
-        aircrafts: (<AircraftsActions>action).payload,
+        errorMessage: (<AircraftsActions>action).payload,
         isUserLogged: false,
       };
     // ! GET ALL AIRCRAFTS

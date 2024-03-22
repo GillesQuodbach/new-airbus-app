@@ -24,7 +24,7 @@ export class GetUserActionSuccess implements Action {
 
 export class GetUserActionError implements Action {
   type: UsersActionsTypes = UsersActionsTypes.GET_USER_ERROR;
-  constructor(public payload: string) {}
+  constructor(public payload: string | User[]) {}
 }
 
 export type UserActions =
