@@ -16,11 +16,6 @@ import {
   GetSearchedAircraftsActionSuccess,
   GetSearchedAircraftsActionError,
 } from './aircrafts.actions';
-import {
-  GetUserLogoutAction,
-  GetUserLogoutActionSuccess,
-  UsersActionsTypes,
-} from './login/login.actions';
 
 @Injectable()
 export class AircraftsEffects {

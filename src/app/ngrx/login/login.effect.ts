@@ -1,17 +1,12 @@
 import { Action } from '@ngrx/store';
 import { Injectable } from '@angular/core';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
-import { EMPTY, Observable, catchError, map, mergeMap, of, tap } from 'rxjs';
+import { Observable, catchError, map, mergeMap, of, tap } from 'rxjs';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import {
-  GetUserAction,
   GetUserActionError,
   GetUserActionSuccess,
   UsersActionsTypes,
-  GetUserLogoutAction,
-  GetUserLogoutActionError,
-  GetUserLogoutActionSuccess,
-  LogoutActionsTypes,
 } from './login.actions';
 import { Router } from '@angular/router';
 

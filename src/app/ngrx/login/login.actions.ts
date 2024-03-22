@@ -12,11 +12,6 @@ export enum UsersActionsTypes {
   GET_USER_ERROR = '[User] Get User Error',
 }
 
-export enum LogoutActionsTypes {
-  LOGOUT_USER = '[User] Logout User',
-  LOGOUT_USER_SUCCESS = '[User] Logout User',
-  LOGOUT_USER_ERROR = '[User] Logout User',
-}
 export class GetUserAction implements Action {
   type: UsersActionsTypes = UsersActionsTypes.GET_USER;
   constructor(public payload: any) {}
@@ -32,25 +27,7 @@ export class GetUserActionError implements Action {
   constructor(public payload: string) {}
 }
 
-export class GetUserLogoutAction implements Action {
-  type: LogoutActionsTypes = LogoutActionsTypes.LOGOUT_USER;
-  constructor(public payload: any) {}
-}
-
-export class GetUserLogoutActionSuccess implements Action {
-  type: LogoutActionsTypes = LogoutActionsTypes.LOGOUT_USER_SUCCESS;
-  constructor(public payload: any) {}
-}
-
-export class GetUserLogoutActionError implements Action {
-  type: LogoutActionsTypes = LogoutActionsTypes.LOGOUT_USER_ERROR;
-  constructor(public payload: string) {}
-}
-
 export type UserActions =
   | GetUserAction
   | GetUserActionSuccess
-  | GetUserActionError
-  | GetUserLogoutAction
-  | GetUserLogoutActionSuccess
-  | GetUserLogoutActionError;
+  | GetUserActionError;

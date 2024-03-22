@@ -5,7 +5,6 @@ import { User } from '../model/user.model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { isUserLoggedIn } from '../ngrx/aircrafts.selectors';
-import { GetUserLogoutAction } from '../ngrx/login/login.actions';
 
 @Injectable({
   providedIn: 'root',

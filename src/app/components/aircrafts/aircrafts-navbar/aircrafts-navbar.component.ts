@@ -7,8 +7,6 @@ import {
 } from 'src/app/ngrx/aircrafts.actions';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { isUserLoggedIn } from 'src/app/ngrx/aircrafts.selectors';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-aircrafts-navbar',

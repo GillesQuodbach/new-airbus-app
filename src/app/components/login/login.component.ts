@@ -1,4 +1,3 @@
-import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Store } from '@ngrx/store';
@@ -19,11 +18,7 @@ export class LoginComponent implements OnInit {
   readonly dataStateEnum = DataStateEnum;
   static loginForm: any;
 
-  constructor(
-    private fb: FormBuilder,
-    private store: Store,
-    private authService: AuthenticateService
-  ) {}
+  constructor(private fb: FormBuilder, private store: Store) {}
 
   ngOnInit(): void {
     this.userLogged$ = this.store.select(isUserLoggedIn);
